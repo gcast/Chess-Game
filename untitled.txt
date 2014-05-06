@@ -1,0 +1,24 @@
+load 'ChessGame.rb'
+
+chess = Board.new
+
+queen = Queen.new(chess,[0,0],:w)
+
+rook = Rook.new(chess,[0,4],:b)
+
+bishop = Bishop.new(chess,[4,4],:w)
+
+chess.add_piece(queen)
+chess.add_piece(rook)
+chess.add_piece(bishop)
+
+king = King.new(chess, [1,1], :b)
+knight = Knight.new(chess, [1,2], :w)
+
+chess.add_piece(king)
+chess.add_piece(knight)
+
+b_pawn = Pawn.new(chess, [6,1], :b)
+w_pawn = Pawn.new(chess, [5,2], :w)
+b_pawn2 = Pawn.new(chess, [5,0], :b)
+
